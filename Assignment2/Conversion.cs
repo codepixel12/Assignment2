@@ -44,7 +44,7 @@ namespace Assignment2
         public double ConvertKelvinToFahrenheit()
         {
             // convertion of K to F = 1.8 x (K - 273) + 32 
-            result = (1.8 * (userAction - 273) + 32);
+            result = (((userAction - 273.15) * 1.8) + 32);
             return result;
         }
 
@@ -52,7 +52,7 @@ namespace Assignment2
         public double ConvertKelvinToCelcius()
         {
             // convertion of K to C = K - 273
-            result = (userAction - 273);
+            result = (userAction - 273.15);
             return result;
         }
 
@@ -68,7 +68,7 @@ namespace Assignment2
         public double ConvertFahrenheitToCelcius()
         {
             // convertion of F to C
-            result = ((userAction - 32) / 9) * 5;
+            result = ((userAction - 32) * (5 / 9));
             return result;
         }
     }

@@ -20,12 +20,7 @@ namespace Assignment2
 
             string cValue;
             int convertValue;
-            do
-            {
-                Console.WriteLine("Enter the value to be converted: ");
-                cValue = Console.ReadLine();
-            } while (!int.TryParse(cValue, out convertValue) || (convertValue < 1));
-
+           
             Console.WriteLine("*****Temperature Conversion*****");
             Console.WriteLine("What temperature do you wish to convert?");
             Console.WriteLine("Press 1 for Celcius to Fahrenheit");
@@ -44,6 +39,13 @@ namespace Assignment2
                 uChoice = Console.ReadLine();
 
             } while (!int.TryParse(uChoice, out userAction) || (userAction < 1) || (userAction > 7));
+
+            do
+            {
+                Console.WriteLine("Enter the value to be converted: ");
+                cValue = Console.ReadLine();
+            } while (!int.TryParse(cValue, out convertValue) || (convertValue < 1));
+
 
             Conversion conversion = new Conversion(convertValue);
             double result;
